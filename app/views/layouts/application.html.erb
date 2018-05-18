@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<body>
+  <%= render 'layouts/navbar_top' %>
+<div class="container-fluid">
+<div class="row">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+     <div class="col-md-5">
+       <% flash.each do |key, value| %>
+            <center  class="alert alert-success"><p id="flsmsg"><%= value %></p></center>
+       <% end %>
+     </div>
+   </div>
+   <%= render 'layouts/navbar_left' %>
+   <%= yield %>
+</div>
+</div>
+</body>
+</html>
