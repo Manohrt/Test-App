@@ -14,7 +14,7 @@
      </thead>
 
     <tbody>
-    <%a=((params[:page] || 1).to_i - 1) * 10%>
+    <%a=((params[:page] || 1).to_i - 1) * 5%>
     <% @users.each_with_index do |user,i| %>
     <tr>
     <td><%= a+i+1 %></td>
